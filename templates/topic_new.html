@@ -1,0 +1,32 @@
+{% extends "base_footer2.html" %}
+
+{% block css2 %}
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/publish.css') }}">
+{% endblock %}
+
+
+{% block content %}
+
+    <div class="publish-container">
+
+        <span>发表新主题</span>
+
+        <form action="{{ url_for('.add') }}" method="post">
+            <input class="base-clear" type="text" name="title" placeholder="标题">
+            <select name="node_id">
+                <option selected="selected" value="1">水区</option>
+                <option value="2">电影</option>
+                <option value="3">音乐</option>
+                <option value="4">体育</option>
+                <option value="5">读书</option>
+                <option value="6">技术</option>
+            </select>
+            <textarea class="base-clear" type="text" name="content"></textarea>
+            <button class="base-clear">发表帖子</button>
+        </form>
+
+        <div class="base-clear publish-error">{{ msgs }}</div>
+
+    </div>
+
+{% endblock %}

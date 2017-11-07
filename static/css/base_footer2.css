@@ -1,0 +1,21 @@
+/* 底栏 */
+
+.base-footer-down {
+    height: 70px;
+    background: rgba(0, 0, 0, 0.67);
+}
+.base-footer-copyright {
+    text-align: center;
+    padding: 10px 0;
+}
+.base-footer-copyright a,.base-footer-copyright p {
+    font-size: 12px;
+    color: white;
+}
+.base-footer-copyright p {
+    display: block;
+    line-height: 20px;
+}
+.base-footer-website {
+    margin-top: 7px;
+}

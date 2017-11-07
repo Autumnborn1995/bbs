@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>火花</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/base_header.css') }}">
+    {% block css %} {% endblock %} 
+    {% block css2 %} {% endblock %} 
+    {% block script %} {% endblock %}
+</head>
+
+<body>
+    <div class="base-header">
+
+        <div class="base-wrap">
+            <!-- logo & wechat -->
+            <a class="base-header-logo" href="/"></a>
+            <a class="base-header-wechat" href="javascript: void(0);">WeChat
+                <div class="base-header-qrcode">
+                    <img src="{{ url_for('static', filename='img/qrcode.png') }}" width="145" height="145" />
+                    <p>扫码加狗坛主微信</p>
+                </div>
+            </a>
+
+            {% if user == "游客" %}
+                <div class="base-header-login">
+                    <a href="/signin">登录</a>
+                    <a class="base-header-register" href="/signup">注册</a>
+                </div>
+            {% else %}
+                <div class="base-header-login">
+                    <a href="{{ url_for('user.index', id=user.id) }}">
+                        <img src="{{ url_for('static', filename='img/avatar_25.jpg') }}">
+                        <span>{{ user.username }}</span>
+                    </a>
+                    <a style="margin: 0 20px 0 5px;" href="/signout">登出</a>
+                </div>
+            {% endif %}
+
+        </div>
+    </div>
+    
+    {% block container %} 
+    {% endblock %}
+
+</body>
+</html>

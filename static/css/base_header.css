@@ -1,0 +1,114 @@
+/* 通用 */
+
+* {
+    margin: 0;
+    padding: 0;
+}
+body {
+    background: #f3f3f3;
+    color: #333;
+    font-size: 14px;
+    font-family: arial, "Microsoft Yahei", "Hiragino Sans GB", sans-serif;
+}
+a {
+    color: #333;
+    text-decoration: none;
+}
+a:hover {
+    color: #ff7e3e;
+}
+li {
+    list-style: none;
+}
+.base-wrap {
+    width: 990px;
+    margin: 0 auto;
+    position: relative;
+}
+.base-clear {
+    clear: both;
+}
+
+
+/* 头 */
+
+.base-header {
+    height: 50px;
+    background: rgba(0, 0, 0, 0.67);
+}
+
+
+/* 火花 */
+
+.base-header-logo {
+    width: 150px;
+    height: 50px;
+    background: url("../img/sparks.png");
+    position: absolute;
+}
+
+
+/* 微信 二维码 */
+
+.base-header-wechat {
+    position: absolute;
+    display: inline-block;
+    background: url('../img/wechat.png')no-repeat 0 center;
+    color: #ff7e3e;
+    line-height: 50px;
+    left: 170px;
+    padding-left: 33px;
+}
+.base-header-wechat:hover .base-header-qrcode {
+    display: block;
+}
+.base-header-qrcode {
+    display: none;
+    padding: 17px 0 15px 0;
+    text-align: center;
+    width: 185px;
+    height: 170px;
+    position: absolute;
+    top: 50px;
+    left: 0;
+    z-index: 1995;
+    background: white;
+    border: 1px solid lightgray;
+}
+.base-header-qrcode p {
+    color: #333;
+    font-size: 14px;
+    font-weight: bold;
+    line-height: 14px;
+    margin-top: -7px;
+}
+
+
+/* 登录注册 用户登出 */
+
+.base-header-login {
+    float: right;
+    margin-top: 14px;
+}
+.base-header-login img {
+    float: left;
+    border-radius: 20px;
+    margin-right: 6px;
+    line-height: 25px;
+    margin-top: -4px;
+}
+.base-header-login a {
+    display: inline-block;
+    line-height: 14px;
+    font-size: 14px;
+    height: 14px;
+    color: white;
+    padding: 0 5px;
+}
+.base-header-login a:hover {
+    color: #ff7e3e;
+}
+.base-header-login .base-header-register {
+    padding-right: 10px;
+    border-left: 1px solid white;
+}

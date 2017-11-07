@@ -1,0 +1,31 @@
+{% extends "base_header.html" %}
+
+{% block css %}
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/base_footer2.css') }}">
+{% endblock %}
+
+{% block container %}
+
+    <div class="base-main-container base-wrap">
+
+        <!-- 主栏 -->
+        {% block content %}
+        {% endblock %}
+
+    </div>
+
+    <!-- 底栏 -->
+    <div class="base-footer">
+        <div class="base-footer-down">
+            <div class="base-wrap base-footer-copyright">
+                <div class="base-footer-website">
+                    <a href="javascript: void(0);">xiongbo.space</a>
+                    <p>
+                    © Since 2017 xiongbo.space, all rights reserved
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+{% endblock %}

@@ -1,0 +1,39 @@
+{% extends "base_footer2.html" %}
+
+{% block css2 %} 
+    <style>
+        .admin-container {
+            width: 930px;
+            min-height: 460px;
+            background: white;
+            border: 1px solid #e6e6e6;
+            padding: 30px;
+            margin: 10px 0;
+        }
+    </style>
+{% endblock %} 
+
+{% block content %}
+    <div class="admin-container">
+        <form action="{{ url_for('.add') }}" method="post">
+            <input type="text" name="name" placeholder="板块名">
+            <input type="text" name="description" placeholder="版块描述">
+            <button>添加版块</button>
+        </form>
+
+        {% for node in node_list %}
+            <div>
+                {{ node.id }} : {{ node.name }}
+                <a href="{{ url_for('.delete', id=node.id) }}">删除</a>
+                <a href="{{ url_for('.delete', id=node.id) }}">改名</a>
+            </div>
+        {% endfor %}
+
+        {% for user in all_user %}
+            <div>
+                帐号 : {{ user.username }}
+                密码 : {{ user.password }}
+            </div>
+        {% endfor %}
+    </div>
+{% endblock %}

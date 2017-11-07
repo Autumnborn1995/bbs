@@ -1,0 +1,83 @@
+/* 通用 */
+* {
+    margin: 0;
+    padding: 0;
+}
+body {
+    background: #f3f3f3;
+    color: #333;
+    font-size: 14px;
+    font-family: arial,"Microsoft Yahei","Hiragino Sans GB",sans-serif;
+}
+
+
+/* 总盒子 */
+.sign-container {
+    width: 850px;
+    background: white;
+    margin: 0 auto;
+    text-align: center;
+}
+
+
+    /* logo */
+    .sign-img {
+        padding-top: 50px;
+    }
+
+
+    /* h1 input button */
+    .sign-container h1 {
+        font-size: 30px;
+        color: #424242;
+        font-weight: normal;
+        padding: 22px 0 35px 0;
+    }
+    .sign-container input {
+        width: 326px;
+        height: 22px;
+        line-height: 22px;
+        padding: 13px 16px 13px 14px;
+        display: block;
+        border: 1px solid lightgray;
+        margin: 0 auto 15px auto;
+    }
+    .sign-container button {
+        width: 359px;
+        height: 50px;
+        line-height: 50px;
+        margin-top: 10px;
+        text-align: center;
+        font-size: 14px;
+        color: #fff;
+        cursor: pointer;
+        border: 0 none;
+        background-color: #ef5b00;
+    }
+
+
+    /* 错误信息 */
+    .sign-error {
+        line-height: 20px;
+        color: #f56700;
+        font-size: 15px;
+        padding: 30px 0;
+    }
+
+
+    /* 登录注册按钮 */
+    .sign-a a {
+        text-decoration: none;
+        font-size: 14px;
+        color: #757575;
+        padding: 0 10px;
+    }
+    .sign-a a:first-child {
+        border-right: 1px solid lightgray;
+    }
+    .sign-a a:hover {
+        color: #ef5b00;
+    }
+    .sign-a {
+        padding: 0 0 50px 0;
+    }

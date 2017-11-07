@@ -1,0 +1,172 @@
+/* 通用 */
+
+.base-txt {
+    font-size: 12px;
+    color: #8c8c8c;
+    line-height: 14px;
+}
+
+
+/* 版块列表 */
+
+.base-content-node {
+    width: 988px;
+    height: 58px;
+    background: white;
+    border: 1px solid #e5e5e5;
+}
+
+.base-node-list li a {
+    float: left;
+    line-height: 58px;
+    font-size: 15px;
+    margin-right: 20px;
+}
+.base-node-list li a:first-child {
+    margin-left: 25px;
+}
+.base-node-on {
+    color: #ff8b3d;
+    text-shadow: 0px 0px 20px;
+    letter-spacing: 1px;
+}
+.topic-head-publish {
+    background: #ff8b3d;
+    color: white;
+    padding: 0 18px;
+    font-size: 12px;
+    line-height: 24px;
+    margin: 20px 30px 0 0;
+    float: right;
+}
+.topic-head-publish:hover {
+    background: #ff7519;
+    color: white;
+}
+
+
+/* 帖子 */
+
+.base-main-content {
+    width: 730px;
+    float: left;
+}
+.base-main-content .ul li {
+    padding-bottom: 25px;
+    border-bottom: 1px solid #e6e6e6;
+}
+.base-main-content .ul li:last-child {
+    border: 0 none;
+}
+
+/* 大盒子 */
+
+.base-content-topic {
+    margin-top: 10px;
+    padding: 25px 35px;
+    background: white;
+    border: 1px solid #e5e5e5;
+}
+
+/* 内容 快速回复 */
+
+.base-topic-title {
+    color: #ff8b3d;
+}
+.base-topic-content {
+    margin-top: 44px;
+    font-size: 16px;
+    line-height: 28px;
+    word-wrap: break-word;
+    padding-bottom: 58px;
+    border-bottom: 1px solid #e6e6e6;
+}
+.base-topic-img {
+    text-align: center;
+    margin: 55px 0 40px 0;
+}
+.topic-faster-reply input {
+    resize: none;
+    outline: 0;
+    float: left;
+    padding: 10px 10px;
+    width: 300px;
+    height: 16px;
+    border: 1px solid #e6e6e6;
+    text-indent: 10px;
+    font-size: 16px;
+    margin: 0 10px 0 120px;
+}
+.topic-faster-reply button {
+    font-size: 14px;
+    height: 38px;
+    line-height: 38px;
+    text-align: center;
+    cursor: pointer;
+    background-color: #ff8b3d;
+    border: 1px solid #ff8b3d;
+    color: #fff;
+    width: 80px;
+}
+
+/* 回帖 */
+
+.base-topic-avatar {
+    float: left;
+}
+.base-topic-avatar img {
+    border-radius: 50%;
+}
+.base-topic-info {
+    margin-top: 28px;
+    line-height: 20px;
+    padding-bottom: 8px;
+}
+.base-topic-info a {
+    margin-right: 5px;
+    font-size: 14px;
+    color: #ff8b3d;
+}
+.base-topic-info span {
+    font-size: 12px;
+    color: #8c8c8c;
+}
+.base-topic-comment {
+    word-wrap: break-word;
+    font-size: 16px;
+    margin-left: 61px;
+}
+
+/* 回复框 */
+
+.base-content-topic .topic-normal-reply button {
+    width: 150px;
+    height: 38px;
+    line-height: 38px;
+    border: 1px solid #ff8b3d;
+    background-color: #ff8b3d;
+    color: white;
+    font-size: 14px;
+    cursor: pointer;
+    margin: 17px 0 0 22px;
+}
+.base-content-topic .topic-normal-reply button:hover {
+    background-color: #ff7519;
+}
+.base-content-topic .topic-normal-reply textarea {
+    resize: none;
+    outline: 0;
+    padding: 10px 10px;
+    width: 590px;
+    height: 140px;
+    border: 1px solid #e6e6e6;
+    text-indent: 10px;
+    font-size: 16px;
+    margin-left: 22px;
+}
+
+
+/* 侧边栏 */
+.base-main-sidebar {
+    margin-top: 10px;
+}

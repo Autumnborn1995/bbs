@@ -1,0 +1,65 @@
+{% extends "base_footer1.html" %}
+
+{% block css2 %}
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/node.css') }}">
+{% endblock %}
+
+{% block content %}
+    <div class="base-main-content">
+        
+        <!-- 版块列表 -->
+        <ul class="base-node-list">
+            <li>
+                {% for n in node_list %}
+                    {% if node.id == n.id %}
+                        <a class="base-node-on" href="{{ url_for('node.show', id=n.id) }}">{{ n.name }}</a>
+                    {% else %}
+                        <a href="{{ url_for('node.show', id=n.id) }}">{{ n.name }}</a>
+                    {% endif %}
+                {% endfor %}
+            </li>
+        </ul>
+    
+        <!-- 帖子列表 -->
+        <div class="base-content-topic">
+            
+            <!-- 上面 -->
+            <div class="base-topic-head">
+                <a class="topic-head-on" href="javascript: void(0);">热门</a>
+                <a href="javascript: void(0);">最新主题</a>
+                <a class="topic-head-publish" href="/topic/new">
+                    发表新主题
+                </a>
+            </div>
+
+            <!-- 下面 -->
+            <div class="base-topic-body">
+                <ul>
+                    {% for t in topics %}
+                        <li>
+                            <div class="base-topic-avatar">
+                                <a href="{{ url_for('user.index', id=t.user_id) }}">
+                                    <img src="{{ url_for('static', filename='img/avatar_50.jpg') }}" width="50" height="50"/>
+                                </a>
+                            </div>
+
+                            <div class="base-topic-content">
+                                <div class="base-topic-title">
+                                    <a href="{{ url_for('topic.show', id=t.id) }}">
+                                        {{ t.title }}
+                                    </a>
+                                </div>
+
+                                <div class="base-topic-info">
+                                    <a class="base-topic-author" href="{{ url_for('user.index', id=t.user_id) }}">{{ t.username }}</a>
+                                    <span> 发表于 {{ t.created_time }}</span>
+                                </div>
+                            </div>
+                        </li>
+                    {% endfor %}
+                </ul>
+            </div>
+
+        </div>
+    </div>
+{% endblock %}

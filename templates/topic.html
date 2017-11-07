@@ -1,0 +1,94 @@
+{% extends "base_footer1.html" %}
+
+{% block css2 %}
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/topic.css') }}">
+{% endblock %}
+
+
+{% block content %}
+
+    <!-- 版块列表 -->
+    <div class="base-content-node">
+        <ul class="base-node-list">
+            <li>
+                {% for n in node_list %}
+                    {% if node.id == n.id %}
+                        <a class="base-node-on" href="{{ url_for('node.show', id=n.id) }}">{{ n.name }}</a>
+                    {% else %}
+                        <a href="{{ url_for('node.show', id=n.id) }}">{{ n.name }}</a>
+                    {% endif %}
+                {% endfor %}
+            </li>
+        </ul>
+        <a class="topic-head-publish" href="#">
+            +发表新主题
+        </a>
+    </div>
+
+    <!-- 帖子内容 -->
+    <div class="base-main-content">
+
+        <!-- 内容 快速回复 -->
+        <div class="base-content-topic">
+
+            <h1 class="base-topic-title">{{ topic.title }}</h1>
+            
+            <div class="base-txt base-topic-info">
+                <a href="{{ url_for('user.index', id=topic.user_id) }}">{{ topic.username }}</a>
+                发表于 {{ topic.created_time }}
+            </div>
+
+            <div class="base-topic-content">
+                {{ topic.content}}
+            </div>
+
+            <div class="base-topic-img">
+                <img src="{{ url_for('static', filename='img/sparks_topic.jpg') }}">
+            </div>
+            
+            <div class="topic-faster-reply">
+                <form action="{{ url_for('comment.add') }}" method="post">
+                    <input type="hidden" name="topic_id" value="{{ topic.id }}">
+                    <input name="content" placeholder="快速回复">
+                    <button>发表</button>
+                </form>
+            </div>
+        </div>
+        
+        <!-- 回帖 -->
+        <div class="base-content-topic">
+            <ul class="ul">
+                {% for c in topic.comments %}
+                    <li>
+                        <div class="base-topic-avatar">
+                            <a href="{{ url_for('user.index', id=c.user_id) }}">
+                                <img src="{{ url_for('static', filename='img/avatar_50.jpg') }}" width="50" height="50"/>
+                            </a>
+                        </div>
+
+                        <div class="base-topic-info">
+                            <a href="{{ url_for('user.index', id=c.user_id) }}">{{ c.username }}</a>
+                            <span>回复于 {{ c.created_time }}</span>
+                        </div>
+                        
+                        <div class="base-topic-comment">
+                            {{ c.content }}
+                        </div>
+
+                    </li>
+                {% endfor %}
+            </ul>
+
+        </div>
+        
+        <!-- 回复框 -->
+        <div class="base-content-topic">
+            <form class="topic-normal-reply" action="{{ url_for('comment.add') }}" method="post">
+                <input type="hidden" name="topic_id" value="{{ topic.id }}">
+                <textarea name="content"></textarea>
+                <button>回复</button>
+            </form>
+        </div>
+    </div>
+
+{% endblock %}

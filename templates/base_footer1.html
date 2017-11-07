@@ -1,0 +1,83 @@
+{% extends "base_header.html" %}
+
+{% block css %}
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/base_footer1.css') }}">
+{% endblock %}
+
+{% block container %}
+
+    <div class="base-main-container base-wrap">
+
+        <!-- 主栏 -->
+        {% block content %}
+        {% endblock %}
+
+        <!-- 侧边栏 -->
+        <div class="base-main-sidebar">
+
+            <div class="sidebar-container">
+                <h3>公告</h3>
+            </div>
+
+            <div class="sidebar-container">
+                <h3>广场</h3>
+                <ul>
+                    <li>
+                        <a href="javascript: void(0);">活动中心</a>
+                    </li>
+                    <li>
+                        <a href="javascript: void(0);">游戏中心</a>
+                    </li>
+                    <li>
+                        <a href="javascript: void(0);">新闻中心</a>
+                    </li>
+                    <li>
+                        <a href="javascript: void(0);">画友</a>
+                    </li>
+                    <li>
+                        <a href="javascript: void(0);">会员购</a>
+                    </li>
+                </ul>
+            </div>
+            
+            <div>
+                <a href="http://wow.blizzard.cn/landing" target="_blank">
+                    <img src="{{ url_for('static', filename='img/wow.jpg') }}">
+                </a>
+                <span class="sidebar-ad">广告</span>
+            </div>
+
+        </div>
+        <div class="base-clear"></div>
+    </div>
+
+
+    <!-- 底栏 -->
+    <div class="base-footer">
+        <div class="base-footer-up">
+            <div class="base-wrap base-footer-link">
+                <ul>
+                    <li><a href="http://www.yinwang.org/" target="_blank">当然我在扯淡</a></li>
+                    <li><a href="https://www.zhihu.com/people/excited-vczh/activities" target="_blank">轮带逛</a></li>
+                    <li><a href="http://www.jianshu.com/u/0bc43e24df90" target="_blank">狗坛主的简书</a></li>
+                    <li><a href="javascript: void(0);">打上花火</a></li>
+                    <li><a href="/dva" target="_blank">D.Va</a></li>
+                </ul>
+                <div class="base-clear"></div>
+            </div>
+        </div>
+
+        <div class="base-footer-down">
+            <div class="base-wrap base-footer-copyright">
+                <a class="base-footer-logo" href="#"></a>
+                <div class="base-footer-website">
+                    <a href="javascript: void(0);">xiongbo.space</a>
+                    <p>
+                    © Since 2017 xiongbo.space, all rights reserved
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+{% endblock %}

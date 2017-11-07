@@ -1,0 +1,76 @@
+/* 大盒子 */
+
+.base-main-container {
+    margin: 10px auto;
+}
+
+
+/* 发表框 */
+
+.publish-container {
+    background: #fff;
+    border: 1px solid #e6e6e6;
+    padding: 40px;
+    margin-bottom: 100px;
+    position: relative;
+    height: 480px;
+}
+.publish-container span {
+    line-height: 20px;
+    float: left;
+}
+.publish-container input {
+    float: left;
+    outline: 0;
+    padding: 12px 140px 12px 10px;
+    width: 347px;
+    line-height: 14px;
+    border: 1px solid #dfdfdf;
+    text-indent: 10px;
+    margin-top: 15px;
+}
+.publish-container select {
+    float: left;
+    margin: 15px 0 0 20px;
+    height: 40px;
+    line-height: 38px;
+    border: 1px solid #dfdfdf;
+    width: 118px;
+    text-align: center;
+}
+.publish-container textarea {
+    float: left;
+    border: 1px solid #dfdfdf;
+    width: 885px;
+    height: 296px;
+    margin-top: 12px;
+    padding: 12px 10px 12px 10px;
+    text-indent: 10px;
+}
+.publish-container button {
+    float: left;
+    margin-top: 20px;
+    display: inline-block;
+    margin-bottom: 0;
+    font-size: 14px;
+    height: 38px;
+    line-height: 38px;
+    text-align: center;
+    cursor: pointer;
+    background-color: #ff8b3d;
+    border: 1px solid #ff8b3d;
+    color: #fff;
+    width: 148px;
+}
+.publish-container button:hover {
+    color: #fff;
+    outline: 0;
+    text-decoration: none;
+    background-color: #ff7519;
+}
+.publish-error {
+    line-height: 20px;
+    color: #f56700;
+    font-size: 15px;
+    padding-top: 10px;
+}

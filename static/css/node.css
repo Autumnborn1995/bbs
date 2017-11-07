@@ -1,0 +1,91 @@
+/* 大盒子 */
+
+.base-main-content {
+    width: 730px;
+    float: left;
+}
+
+
+/* 版块列表 */
+
+.base-node-list {
+    height: 58px;
+    background: white;
+    border: 1px solid #e5e5e5;
+    padding-left: 25px;
+}
+.base-node-list li a {
+    float: left;
+    line-height: 58px;
+    font-size: 15px;
+    margin-right: 20px;
+}
+.base-node-on {
+    color: #ff8b3d;
+    text-shadow: 0px 0px 20px;
+    letter-spacing: 1px;
+}
+
+
+/* 帖子列表 */
+
+.base-content-topic {
+    margin-top: 10px;
+    padding: 20px 30px;
+    background: white;
+    border: 1px solid #e5e5e5;
+}
+
+/* 上面 */
+
+.base-topic-head a {
+    display: inline-block;
+    line-height: 30px;
+    padding: 0 10px;
+}
+.base-topic-head .topic-head-on {
+    background: #f3f3f3;
+}
+.base-topic-head .topic-head-publish {
+    background: #ff8b3d;
+    color: white;
+    padding: 0 29px;
+    font-size: 12px;
+    float: right;
+    line-height: 32px;
+}
+.topic-head-publish:hover {
+    background: #ff7519;
+}
+
+/* 下面 */
+
+.base-topic-body ul li {
+    padding-top: 18px;
+}
+.base-topic-body ul li:last-child .base-topic-content {
+    border: 0 none;
+}
+.base-topic-avatar {
+    float: left;
+}
+.base-topic-avatar img {
+    border-radius: 50%;
+}
+.base-topic-content {
+    margin-left: 62px;
+    padding-top: 8px;
+    border-bottom: 1px solid #e5e5e5;
+    padding-bottom: 16px;
+}
+.base-topic-title a {
+    font-size: 16px;
+}
+.base-topic-info {
+    margin-top: 9px;
+    font-size: 12px;
+    color: #888;
+}
+.base-topic-author {
+    color: #ff8b3d;
+}

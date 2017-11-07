@@ -1,0 +1,153 @@
+/* 总盒子 */
+
+.base-main-container {
+    margin: 10px auto;
+}
+
+
+/* 头像 名字 */
+
+.base-main-container img {
+    float: left;
+    padding: 9px;
+    border: 1px solid #c4cacf;
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    margin-top: 15px;
+}
+.user-name {
+    display: inline-block;
+    color: #424854;
+    font-size: 28px;
+    font-weight: bold;
+    line-height: 32px;
+    margin: 25px 0 0 40px;
+}
+
+
+
+/* 大盒子 */
+
+.user-container {
+    padding-top: 35px;
+}
+
+
+/* 左边 */
+
+.base-main-sidebar {
+    width: 250px;
+    height: 150px;
+    background: white;
+    float: left;
+    width: 248px;
+    padding: 10px 0;
+    background-color: #fff;
+    border-radius: 0 0 2px 2px;
+    z-index: 0;
+    position: relative;
+    border: 1px solid #e6e6e6;
+}
+.base-main-sidebar h4 {
+    width: 190px;
+    margin: 0 auto 10px;
+    font-size: 17.5px;
+    line-height: 30px;
+    padding-bottom: 10px;
+    color: #000;
+    border-bottom: 1px solid #e5e5e5;
+}
+.base-main-sidebar a {
+    text-indent: 30px;
+    display: block;
+    line-height: 40px;
+    color: #6d6d6d;
+    font-size: 14px;
+}
+.base-main-sidebar a:hover {
+    color: #ff7e3e;
+}
+
+
+/* 资料 */
+
+.base-main-content {
+    width: 670px;
+    float: right;
+    background: white;
+    border: 1px solid #e6e6e6;
+    padding: 0 30px;
+    padding-bottom: 60px;
+    min-height: 300px;
+    display: none;
+}
+.base-main-content h2 {
+    font-size: 14px;
+    line-height: 50px;
+    border-bottom: 1px solid #e6e6e6;
+    margin-bottom: 8px;
+    font-weight: normal;
+}
+.base-main-content li {
+    margin-top: 15px;
+}
+.profile span {
+    margin-left: 15px;
+}
+
+
+/* 帖子列表 */
+
+.topic-list p {
+    display: inline-block;
+    line-height: 18px;
+    margin-top: 10px;
+}
+.publish-time {
+    margin-left: 500px;
+}
+.created-time {
+    float: right;
+    line-height: 20px;
+    font-size: 12px;
+    color: #6d6d6d;
+    margin-right: 50px;
+}
+.single-topic .delete-button {
+    float: right;
+    line-height: 20px;
+    font-size: 12px;
+    color: #6d6d6d;
+    margin-right: 20px;
+}
+.single-topic {
+    border-bottom: 1px solid #e6e6e6;
+    padding: 15px 0;
+}
+.single-topic a {
+    font-size: 16px;
+    max-width: 365px;
+    display: inline-block;
+    width: auto;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    vertical-align: middle;
+    line-height: 20px;
+}
+.single-topic a:hover {
+    color: #ff7e3e;
+}
+
+
+/* js选中 */
+
+.user-on {
+    background: #f3f3f3;
+    border-left: 2px solid #ff7e3e;
+    display: block;
+}
+.display-show {
+    display: block;   
+}

@@ -1,0 +1,97 @@
+/* 主栏 */
+
+.base-main-container {
+    margin: 10px auto;
+}
+
+
+/* 侧边栏 */
+
+.base-main-sidebar {
+    width: 250px;
+    height: 800px;
+    float: right;
+}
+.sidebar-container {
+    background: white;
+    border: 1px solid #e6e6e6;
+    padding: 0 19px 25px 29px;
+    height: 240px;
+    margin-bottom: 12px;
+}
+.sidebar-container h3 {
+    border-bottom: 1px solid #e6e6e6;
+    margin-bottom: 20px;
+    font-size: 14px;
+    line-height: 26px;
+    padding-bottom: 4px;
+    margin: 16px 0 0 0;
+}
+.sidebar-container ul {
+    margin-top: 30px;
+}
+.sidebar-container li {
+    margin-top: 13px;
+}
+.sidebar-ad {
+    line-height: 1; 
+    text-align: center; 
+    background-color: rgba(0, 0, 0, 0.3); 
+    font-size: 12px; 
+    position: absolute; 
+    right: 3px; 
+    top: 740px; 
+    padding: 4px; 
+    color: rgb(255, 255, 255);
+}
+
+
+
+/* 底栏 */
+
+.base-footer-up {
+    height: 60px;
+    background: #3f3f3f;
+}
+.base-footer-link a {
+    color: #6d6d6d;
+    display: block;
+    padding: 0 50px;
+}
+.base-footer-link a:hover {
+    color: #ff8b3d;
+}
+.base-footer-link li {
+    float: left;
+    border-right: 1px solid #4a4a4a;
+    margin-top: 20px;
+}
+.base-footer-link li:last-child {
+    border: none;
+}
+
+.base-footer-down {
+    height: 70px;
+    background: rgba(0, 0, 0, 0.67);
+}
+.base-footer-copyright {
+    padding: 10px 0;
+}
+.base-footer-logo {
+    float: left;
+    margin-right: 10px;
+    width: 150px;
+    height: 50px;
+    background-image: url('../img/sparks.png');
+}
+.base-footer-website {
+    margin-top: 7px;
+}
+.base-footer-copyright a,.base-footer-copyright p {
+    font-size: 12px;
+    color: white;
+}
+.base-footer-copyright p {
+    display: block;
+    line-height: 20px;
+}
