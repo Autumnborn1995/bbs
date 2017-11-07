@@ -14,7 +14,7 @@ bbs_supervisor.conf 是 supervisor 的配置文件，更改相应内容
 在 /home/venv 下创建虚拟环境
 在虚拟环境里用 pip install -r bbs_requirements.txt 安装依赖
 
-安装 mysql ，创建数据库
+创建数据库
 更改 app.py 里 db_config 的相应内容
 
 初始、迁移数据库

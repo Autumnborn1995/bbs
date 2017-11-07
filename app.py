@@ -35,14 +35,15 @@ db_config = {
     'NAME': 'bbs'
 }
 
+db_path = 'bbs.sqlite'
+
 
 def configure_app():
     app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = True
     app.secret_key = os.urandom(24)
-    # app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///{}'.format(db_path)
+    app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///{}'.format(db_path)
     # app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql+pymysql://root:pwd@localhost/bbs'
-    app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql+{DRIVER}://{USER}:{PASSWORD}@{HOST}:{PORT}/{NAME}'.format(
-        **db_config)
+    # app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql+{DRIVER}://{USER}:{PASSWORD}@{HOST}:{PORT}/{NAME}'.format(**db_config)
     db.init_app(app)
     register_routes(app)
 
@@ -58,7 +59,7 @@ def server():
     config = dict(
         debug=True,
         host='0.0.0.0',
-        port=3000,
+        port=80,
     )
     app.run(**config)
 
@@ -70,5 +71,5 @@ def configure_manager():
 
 if __name__ == '__main__':
     configure_manager()
-    configure_app()
+    configured_app()
     manager.run()
