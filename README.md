@@ -25,7 +25,8 @@ python3 app.py db upgrade
 其他命令
 测试 nginx 是否配置好了
 sudo service nginx configtest
-运行 uwsgi ，测试用
+运行 uwsgi ，测试用，在启动 uwsgi 之前要先启动 nginx
+因为配置文件写的适合 nginx 相关，除非不用配置文件直接启动 uwsgi
 uwsgi --ini bbs_uwsgi.ini
 
 
